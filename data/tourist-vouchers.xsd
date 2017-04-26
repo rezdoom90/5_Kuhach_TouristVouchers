@@ -2,15 +2,15 @@
 <schema xmlns="http://www.w3.org/2001/XMLSchema"
         targetNamespace="https://www.github.com/makar-y/epam-pr5-xml-parsing.git/files/periodicals"
         xmlns:tns="https://www.github.com/makar-y/epam-pr5-xml-parsing.git/files/papers">
-    <simpleType name="ISSN">
+    <simpleType name="HotelType">
         <restriction base="ID">
-            <pattern value="(\\d){4}-(\\d){3}[\\dxX]"/>
+            <pattern value="[1-5](RO|HB|BB|FB|AI)[1-3](TV)?+(CN)?+"/>
         </restriction>
     </simpleType>
 
     <complexType name="Periodical">
 
-        <attribute name="issn" type="tns:ISSN" use="required"/>
+        <attribute name="issn" type="tns:HotelType" use="required"/>
 
         <attribute name="period" use="optional">
             <simpleType>
