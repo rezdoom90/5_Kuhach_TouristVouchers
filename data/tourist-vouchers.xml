@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<tns:travelVouchers xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-             xmlns:tns="https://github.com/rezdoom90/5_Kuhach_TouristVouchers/tree/master/data"
-             xsi:schemaLocation="https://github.com/rezdoom90/5_Kuhach_TouristVouchers/tree/master/data tourist-vouchers.xsd">
+<tns:travelVouchers xmlns:tns="https://github.com/rezdoom90/5_Kuhach_TouristVouchers/tree/master/data"
+                    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                    xsi:schemaLocation="https://github.com/rezdoom90/5_Kuhach_TouristVouchers/tree/master/data tourist-vouchers.xsd">
 
     <roadTravelVoucher hotelType="2HB2TV" type="holiday">
         <cost>74.5</cost>
