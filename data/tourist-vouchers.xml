@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tns:travelVouchers xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xmlns:tns="https://github.com/rezdoom90/5_Kuhach_TouristVouchers/tree/master/data"
+             xsi:schemaLocation="https://github.com/rezdoom90/5_Kuhach_TouristVouchers/tree/master/data tourist-vouchers.xsd">
+
+    <roadTravelVoucher hotelType="2HB2TV" type="holiday">
+        <cost>74.5</cost>
+        <duration>4</duration>
+        <country>Poland</country>
+        <bus>false</bus>
+    </roadTravelVoucher>
+    <roadTravelVoucher hotelType="4FB1TVCN" type="mixed">
+        <cost>215.8</cost>
+        <duration>14</duration>
+        <country>Russia</country>
+        <bus>true</bus>
+    </roadTravelVoucher>
+    <roadTravelVoucher hotelType="3BB2CN" type="cycling">
+        <cost>322.1</cost>
+        <duration>7</duration>
+        <country>Italy</country>
+        <bus>false</bus>
+    </roadTravelVoucher>
+    <roadTravelVoucher hotelType="4HB1TVCN" type="culture">
+        <cost>146.0</cost>
+        <duration>5</duration>
+        <country>France</country>
+        <bus>true</bus>
+    </roadTravelVoucher>
+    <waterTravelVoucher hotelType="2RO3" type="walking">
+        <cost>146.0</cost>
+        <duration>5</duration>
+        <country>France</country>
+        <cruise>false</cruise>
+    </waterTravelVoucher>
+    <waterTravelVoucher hotelType="5AI1TVCN" type="photography">
+        <cost>658.4</cost>
+        <duration>5</duration>
+        <country>Great Britain</country>
+        <cruise>false</cruise>
+    </waterTravelVoucher>
+    <waterTravelVoucher hotelType="4FB2TVCN" type="winter">
+        <cost>590.3</cost>
+        <duration>14</duration>
+        <country>Italy</country>
+        <cruise>true</cruise>
+    </waterTravelVoucher>
+    <waterTravelVoucher hotelType="1RO1TV" type="mixed">
+        <cost>236.2</cost>
+        <duration>21</duration>
+        <country>Brasil</country>
+        <cruise>false</cruise>
+    </waterTravelVoucher>
+    <airTravelVoucher hotelType="2RO2TVCN" type="culture">
+        <cost>356.1</cost>
+        <duration>14</duration>
+        <country>Chile</country>
+        <commonAirliner>true</commonAirliner>
+    </airTravelVoucher>
+    <airTravelVoucher hotelType="3BB2TV" type="winter">
+        <cost>216.5</cost>
+        <duration>7</duration>
+        <country>Canada</country>
+        <commonAirliner>true</commonAirliner>
+    </airTravelVoucher>
+    <airTravelVoucher hotelType="4FB1TVCN" type="photography">
+        <cost>572.8</cost>
+        <duration>7</duration>
+        <country>USA</country>
+        <commonAirliner>true</commonAirliner>
+    </airTravelVoucher>
+    <airTravelVoucher hotelType="4HB2TVCN">
+        <cost>353.8</cost>
+        <duration>5</duration>
+        <country>Spain</country>
+        <commonAirliner>false</commonAirliner>
+    </airTravelVoucher>
+    <railTravelVoucher hotelType="3HB2TV" type="cycling">
+        <cost>174.5</cost>
+        <duration>5</duration>
+        <country>Germany</country>
+        <businessClass>false</businessClass>
+    </railTravelVoucher>
+    <railTravelVoucher hotelType="3HB2TV" type="cycling">
+        <cost>174.5</cost>
+        <duration>5</duration>
+        <country>Germany</country>
+        <businessClass>false</businessClass>
+    </railTravelVoucher>
+    <railTravelVoucher hotelType="3HB2TV" type="cycling">
+        <cost>174.5</cost>
+        <duration>5</duration>
+        <country>Germany</country>
+        <businessClass>false</businessClass>
+    </railTravelVoucher>
+    <railTravelVoucher hotelType="3HB2TV" type="cycling">
+        <cost>174.5</cost>
+        <duration>5</duration>
+        <country>Germany</country>
+        <businessClass>false</businessClass>
+    </railTravelVoucher>
+</tns:travelVouchers>
