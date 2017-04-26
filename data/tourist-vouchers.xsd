@@ -1,58 +1,82 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <schema xmlns="http://www.w3.org/2001/XMLSchema"
-        targetNamespace="https://www.github.com/makar-y/epam-pr5-xml-parsing.git/files/periodicals"
-        xmlns:tns="https://www.github.com/makar-y/epam-pr5-xml-parsing.git/files/papers">
+        targetNamespace="https://github.com/rezdoom90/5_Kuhach_TouristVouchers/tree/master/data"
+        xmlns:tns="https://github.com/rezdoom90/5_Kuhach_TouristVouchers/tree/master/data">
     <simpleType name="HotelType">
         <restriction base="ID">
             <pattern value="[1-5](RO|HB|BB|FB|AI)[1-3](TV)?+(CN)?+"/>
         </restriction>
     </simpleType>
 
-    <complexType name="Periodical">
+    <complexType name="TravelVoucher">
 
-        <attribute name="issn" type="tns:HotelType" use="required"/>
+        <attribute name="hotelType" type="tns:HotelType" use="required"/>
 
-        <attribute name="period" use="optional">
+        <attribute name="type" use="optional">
             <simpleType>
                 <restriction base="string">
-                    <enumeration value="daily"/>
-                    <enumeration value="weekly"/>
-                    <enumeration value="monthly"/>
-                    <enumeration value="quarterly"/>
+                    <enumeration value="holiday"/>
+                    <enumeration value="culture"/>
+                    <enumeration value="mixed"/>
+                    <enumeration value="cycling"/>
+                    <enumeration value="photography"/>
+                    <enumeration value="polar"/>
+                    <enumeration value="walking"/>
+                    <enumeration value="wildlife"/>
+                    <enumeration value="winter"/>
                 </restriction>
             </simpleType>
         </attribute>
 
         <sequence>
-            <element name="title" type="string"/>
-            <element name="volume" type="integer"/>
+            <element name="cost" type="double"/>
+            <element name="duration" type="integer"/>
+            <element name="country" type="string"/>
         </sequence>
     </complexType>
 
-    <complexType name="Newspaper">
+    <complexType name="RailTravelVoucher">
         <complexContent>
-            <extension base="tns:Periodical">
-                <element name="colored" type="boolean"/>
+            <extension base="tns:TravelVoucher">
+                <element name="businessClass" type="boolean"/>
             </extension>
         </complexContent>
     </complexType>
 
-    <complexType name="Magazine">
+    <complexType name="AirTravelVoucher">
         <complexContent>
-            <extension base="tns:Periodical">
-                <element name="glossy" type="boolean"/>
+            <extension base="tns:TravelVoucher">
+                <element name="commonAirliner" type="boolean"/>
             </extension>
         </complexContent>
     </complexType>
 
-    <element name="periodical" type="tns:Periodical" abstract="true"/>
-    <element name="newspaper" type="tns:Newspaper" substitutionGroup="tns:periodical"/>
-    <element name="magazine" type="tns:Magazine" substitutionGroup="tns:periodical"/>
+    <complexType name="WaterTravelVoucher">
+        <complexContent>
+            <extension base="tns:TravelVoucher">
+                <element name="cruise" type="boolean"/>
+            </extension>
+        </complexContent>
+    </complexType>
 
-    <element name="periodicals">
+    <complexType name="RoadTravelVoucher">
+        <complexContent>
+            <extension base="tns:TravelVoucher">
+                <element name="bus" type="boolean"/>
+            </extension>
+        </complexContent>
+    </complexType>
+
+    <element name="travelVoucher" type="tns:TravelVoucher" abstract="true"/>
+    <element name="roadTravelVoucher" type="tns:RoadTravelVoucher" substitutionGroup="tns:travelVoucher"/>
+    <element name="waterTravelVoucher" type="tns:WaterTravelVoucher" substitutionGroup="tns:travelVoucher"/>
+    <element name="airTravelVoucher" type="tns:AirTravelVoucher" substitutionGroup="tns:travelVoucher"/>
+    <element name="railTravelVoucher" type="tns:RailTravelVoucher" substitutionGroup="tns:travelVoucher"/>
+
+    <element name="travelVouchers">
         <complexType>
             <sequence>
-                <element ref="tns:periodical" maxOccurs="unbounded"/>
+                <element ref="tns:travelVoucher" maxOccurs="unbounded"/>
             </sequence>
         </complexType>
     </element>
