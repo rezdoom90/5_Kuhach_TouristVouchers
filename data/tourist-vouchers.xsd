@@ -83,10 +83,10 @@
     <element name="travelVouchers">
         <complexType>
             <sequence>
-                <element ref="tns:roadTravelVoucher" maxOccurs="unbounded"/>
-                <element ref="tns:waterTravelVoucher" maxOccurs="unbounded"/>
-                <element ref="tns:airTravelVoucher" maxOccurs="unbounded"/>
-                <element ref="tns:railTravelVoucher" maxOccurs="unbounded"/>
+                <element name="roadTravelVoucher" type="tns:RoadTravelVoucher" maxOccurs="unbounded"/>
+                <element name="waterTravelVoucher" type="tns:WaterTravelVoucher" maxOccurs="unbounded"/>
+                <element name="airTravelVoucher" type="tns:AirTravelVoucher" maxOccurs="unbounded"/>
+                <element name="railTravelVoucher" type="tns:RailTravelVoucher" maxOccurs="unbounded"/>
             </sequence>
         </complexType>
     </element>
