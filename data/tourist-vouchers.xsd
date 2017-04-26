@@ -9,6 +9,11 @@
     </simpleType>
 
     <complexType name="TravelVoucher">
+        <sequence>
+            <element name="cost" type="double"/>
+            <element name="duration" type="integer"/>
+            <element name="country" type="string"/>
+        </sequence>
 
         <attribute name="hotelType" type="tns:HotelType" use="required"/>
 
@@ -27,18 +32,14 @@
                 </restriction>
             </simpleType>
         </attribute>
-
-        <sequence>
-            <element name="cost" type="double"/>
-            <element name="duration" type="integer"/>
-            <element name="country" type="string"/>
-        </sequence>
     </complexType>
 
     <complexType name="RailTravelVoucher">
         <complexContent>
             <extension base="tns:TravelVoucher">
-                <element name="businessClass" type="boolean"/>
+                <all>
+                    <element name="businessClass" type="boolean"/>
+                </all>
             </extension>
         </complexContent>
     </complexType>
@@ -46,7 +47,9 @@
     <complexType name="AirTravelVoucher">
         <complexContent>
             <extension base="tns:TravelVoucher">
-                <element name="commonAirliner" type="boolean"/>
+                <all>
+                    <element name="commonAirliner" type="boolean"/>
+                </all>
             </extension>
         </complexContent>
     </complexType>
@@ -54,7 +57,9 @@
     <complexType name="WaterTravelVoucher">
         <complexContent>
             <extension base="tns:TravelVoucher">
-                <element name="cruise" type="boolean"/>
+                <all>
+                    <element name="cruise" type="boolean"/>
+                </all>
             </extension>
         </complexContent>
     </complexType>
@@ -62,7 +67,9 @@
     <complexType name="RoadTravelVoucher">
         <complexContent>
             <extension base="tns:TravelVoucher">
-                <element name="bus" type="boolean"/>
+                <all>
+                    <element name="bus" type="boolean"/>
+                </all>
             </extension>
         </complexContent>
     </complexType>
