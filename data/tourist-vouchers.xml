@@ -81,22 +81,22 @@
         <country>Germany</country>
         <businessClass>false</businessClass>
     </railTravelVoucher>
-    <railTravelVoucher hotelType="3HB2TV" type="cycling">
-        <cost>174.5</cost>
-        <duration>5</duration>
-        <country>Germany</country>
+    <railTravelVoucher hotelType="2RO3" type="walking">
+        <cost>218.3</cost>
+        <duration>28</duration>
+        <country>India</country>
         <businessClass>false</businessClass>
     </railTravelVoucher>
-    <railTravelVoucher hotelType="3HB2TV" type="cycling">
-        <cost>174.5</cost>
-        <duration>5</duration>
-        <country>Germany</country>
-        <businessClass>false</businessClass>
+    <railTravelVoucher hotelType="5AI1TVCN" type="photography">
+        <cost>805.3</cost>
+        <duration>12</duration>
+        <country>Montenegro</country>
+        <businessClass>true</businessClass>
     </railTravelVoucher>
-    <railTravelVoucher hotelType="3HB2TV" type="cycling">
-        <cost>174.5</cost>
-        <duration>5</duration>
-        <country>Germany</country>
+    <railTravelVoucher hotelType="4BB2" type="culture">
+        <cost>503.8</cost>
+        <duration>7</duration>
+        <country>Hungary</country>
         <businessClass>false</businessClass>
     </railTravelVoucher>
 </tns:travelVouchers>

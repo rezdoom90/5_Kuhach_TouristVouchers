@@ -13,14 +13,15 @@ public class RoadTravelVoucher extends TravelVoucher {
 
     @Override
     public boolean equals(Object obj) {
-        if (obj == this) {
+        if (this == obj)
             return true;
-        } else if (obj == null || obj.getClass() != getClass()) {
+        if (obj == null)
             return false;
-        }
+        if (getClass() != obj.getClass())
+            return false;
 
         RoadTravelVoucher other = (RoadTravelVoucher) obj;
-        return (equals(other) && bus == other.bus);
+        return (bus == other.bus);
     }
 
     @Override

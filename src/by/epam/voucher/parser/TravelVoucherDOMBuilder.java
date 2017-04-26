@@ -40,7 +40,7 @@ public class TravelVoucherDOMBuilder {
             return travelVouchers;
         }
 
-        public void buildSetPeriodicals(String fileName) throws IllegalVoucherException {
+        public void buildTravelVouchersSet(String fileName) throws IllegalVoucherException {
             try {
                 Document doc = docBuilder.parse(fileName);
                 Element root = doc.getDocumentElement();

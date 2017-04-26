@@ -64,6 +64,20 @@ public abstract class TravelVoucher {
     }
 
     @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof TravelVoucher)) return false;
+
+        TravelVoucher that = (TravelVoucher) o;
+
+        if (Double.compare(that.cost, cost) != 0) return false;
+        if (duration != that.duration) return false;
+        if (!hotelType.equals(that.hotelType)) return false;
+        if (type != that.type) return false;
+        return country.equals(that.country);
+    }
+
+    @Override
     public int hashCode() {
         int result = 1;
 

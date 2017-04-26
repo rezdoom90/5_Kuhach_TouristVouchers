@@ -13,14 +13,15 @@ public class WaterTravelVoucher extends TravelVoucher {
 
     @Override
     public boolean equals(Object obj) {
-        if (obj == this) {
+        if (this == obj)
             return true;
-        } else if (obj == null || obj.getClass() != getClass()) {
+        if (obj == null)
             return false;
-        }
+        if (getClass() != obj.getClass())
+            return false;
 
         WaterTravelVoucher other = (WaterTravelVoucher) obj;
-        return (equals(other) && cruise == other.cruise);
+        return (cruise == other.cruise);
     }
 
     @Override

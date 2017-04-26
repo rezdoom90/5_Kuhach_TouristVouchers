@@ -13,14 +13,15 @@ public class RailTravelVoucher extends TravelVoucher {
 
     @Override
     public boolean equals(Object obj) {
-        if (obj == this) {
+        if (this == obj)
             return true;
-        } else if (obj == null || obj.getClass() != getClass()) {
+        if (obj == null)
             return false;
-        }
+        if (getClass() != obj.getClass())
+            return false;
 
         RailTravelVoucher other = (RailTravelVoucher) obj;
-        return (equals(other) && businessClass == other.businessClass);
+        return (businessClass == other.businessClass);
     }
 
     @Override

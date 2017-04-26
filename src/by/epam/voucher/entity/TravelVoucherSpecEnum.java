@@ -7,7 +7,15 @@ public enum TravelVoucherSpecEnum {
     COST("cost"),
     DURATION("duration"),
     COUNTRY("country"),
-    TRANSPORT("transport");
+    COMMON_AIRLINER("commonAirliner"),
+    BUS("bus"),
+    CRUISE("cruise"),
+    BUSINESS_CLASS("businessClass"),
+    ROAD_TRAVEL_VOUCHER("roadTravelVoucher"),
+    WATER_TRAVEL_VOUCHER("waterTravelVoucher"),
+    AIR_TRAVEL_VOUCHER("airTravelVoucher"),
+    RAIL_TRAVEL_VOUCHER("railTravelVoucher");
+
 
     private String value;
 

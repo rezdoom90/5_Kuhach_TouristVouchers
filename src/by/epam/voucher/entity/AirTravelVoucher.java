@@ -13,14 +13,15 @@ public class AirTravelVoucher extends TravelVoucher {
 
     @Override
     public boolean equals(Object obj) {
-        if (obj == this) {
+        if (this == obj)
             return true;
-        } else if (obj == null || obj.getClass() != getClass()) {
+        if (obj == null)
             return false;
-        }
+        if (getClass() != obj.getClass())
+            return false;
 
         AirTravelVoucher other = (AirTravelVoucher) obj;
-        return (equals(other) && commonAirliner == other.commonAirliner);
+        return (commonAirliner == other.commonAirliner);
     }
 
     @Override
