@@ -2,8 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="57bfb52a-21d0-4fb2-8b41-a4006a929f05" name="Default" comment="">
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/by/epam/voucher/entity/TravelVoucherSpecEnum.java" afterPath="$PROJECT_DIR$/src/by/epam/voucher/enumeration/TravelVoucherSpecEnum.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/5_Kuhach_TouristVouchers/by/epam/voucher/enumeration/TravelVoucherSpecEnum.class" afterPath="$PROJECT_DIR$/out/production/5_Kuhach_TouristVouchers/by/epam/voucher/enumeration/TravelVoucherSpecEnum.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/5_Kuhach_TouristVouchers/by/epam/voucher/handler/TravelVoucherHandler$1.class" afterPath="$PROJECT_DIR$/out/production/5_Kuhach_TouristVouchers/by/epam/voucher/handler/TravelVoucherHandler$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/5_Kuhach_TouristVouchers/by/epam/voucher/handler/TravelVoucherHandler.class" afterPath="$PROJECT_DIR$/out/production/5_Kuhach_TouristVouchers/by/epam/voucher/handler/TravelVoucherHandler.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/by/epam/voucher/handler/TravelVoucherHandler.java" afterPath="$PROJECT_DIR$/src/by/epam/voucher/handler/TravelVoucherHandler.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -48,7 +51,7 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="TravelVoucherSAXBuilderTest.java" pinned="false" current-in-tab="false">
+          <file leaf-file-name="TravelVoucherSAXBuilderTest.java" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/test/by/epam/voucher/parser/TravelVoucherSAXBuilderTest.java">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="323">
@@ -112,20 +115,6 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="TravelVoucherHandler.java" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/by/epam/voucher/handler/TravelVoucherHandler.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="255">
-                  <caret line="21" column="35" lean-forward="true" selection-start-line="21" selection-start-column="35" selection-end-line="21" selection-end-column="35" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                    <element signature="e#922#923#0" expanded="true" />
-                    <element signature="e#988#989#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
           <file leaf-file-name="IllegalAttributeException.java" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/by/epam/voucher/exception/IllegalAttributeException.java">
               <provider selected="true" editor-type-id="text-editor">
@@ -155,7 +144,19 @@
       </split-first>
       <split-second>
         <leaf>
-          <file leaf-file-name="TravelVoucherSAXBuilder.java" pinned="false" current-in-tab="true">
+          <file leaf-file-name="TravelVoucherHandler.java" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/by/epam/voucher/handler/TravelVoucherHandler.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="1105">
+                  <caret line="70" column="9" lean-forward="false" selection-start-line="70" selection-start-column="9" selection-end-line="70" selection-end-column="9" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="TravelVoucherSAXBuilder.java" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/by/epam/voucher/parser/TravelVoucherSAXBuilder.java">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="408">
@@ -278,8 +279,8 @@
         <option value="$PROJECT_DIR$/src/by/epam/voucher/entity/TravelVoucherSpecEnum.java" />
         <option value="$PROJECT_DIR$/test/by/epam/voucher/parser/TravelVoucherStAXBuilderTest.java" />
         <option value="$PROJECT_DIR$/src/by/epam/voucher/validator/XsdValidator.java" />
-        <option value="$PROJECT_DIR$/src/by/epam/voucher/handler/TravelVoucherHandler.java" />
         <option value="$PROJECT_DIR$/src/by/epam/voucher/enumeration/TravelVoucherSpecEnum.java" />
+        <option value="$PROJECT_DIR$/src/by/epam/voucher/handler/TravelVoucherHandler.java" />
       </list>
     </option>
   </component>
@@ -1005,11 +1006,11 @@
     <history-entry file="TravelVoucherSAXBuilderTest - 2017.04.27 at 01h 17m 34s.xml">
       <configuration name="TravelVoucherSAXBuilderTest" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="TravelVoucherSAXBuilderTest - 2017.04.27 at 01h 23m 53s.xml">
+      <configuration name="TravelVoucherSAXBuilderTest" configurationId="JUnit" />
+    </history-entry>
     <history-entry file="TravelVoucherSAXBuilderTest_buildTravelVouchersSetTest_ContainsRoadTravelVoucher - 2017.04.27 at 00h 50m 36s.xml">
       <configuration name="TravelVoucherSAXBuilderTest.buildTravelVouchersSetTest_ContainsRoadTravelVoucher" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="TravelVoucherSAXBuilderTest_buildTravelVouchersSetTest_Size - 2017.04.27 at 00h 34m 09s.xml">
-      <configuration name="TravelVoucherSAXBuilderTest.buildTravelVouchersSetTest_Size" configurationId="JUnit" />
     </history-entry>
     <history-entry file="TravelVoucherStAXBuilderTest - 2017.04.27 at 00h 47m 24s.xml">
       <configuration name="TravelVoucherStAXBuilderTest" configurationId="JUnit" />
@@ -1055,7 +1056,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="2" />
+      <option name="time" value="3" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1163,17 +1164,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/by/epam/voucher/parser/TravelVoucherDOMBuilderTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="43" lean-forward="true" selection-start-line="19" selection-start-column="43" selection-end-line="19" selection-end-column="43" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#653#654#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/data/tourist-vouchers.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
@@ -1231,18 +1221,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/by/epam/voucher/parser/TravelVoucherDOMBuilder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="629">
-          <caret line="37" column="0" lean-forward="true" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1386#1387#0" expanded="true" />
-            <element signature="e#1431#1432#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/by/epam/voucher/validator/XsdValidator.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="595">
@@ -1275,18 +1253,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/by/epam/voucher/parser/TravelVoucherSAXBuilderTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#690#691#0" expanded="true" />
-            <element signature="e#758#759#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/by/epam/voucher/enumeration/TravelVoucherSpecEnum.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
@@ -1305,14 +1271,47 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/by/epam/voucher/handler/TravelVoucherHandler.java">
+    <entry file="file://$PROJECT_DIR$/src/by/epam/voucher/parser/TravelVoucherDOMBuilder.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="21" column="35" lean-forward="true" selection-start-line="21" selection-start-column="35" selection-end-line="21" selection-end-column="35" />
+        <state relative-caret-position="629">
+          <caret line="37" column="0" lean-forward="true" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#922#923#0" expanded="true" />
-            <element signature="e#988#989#0" expanded="true" />
+            <element signature="e#1386#1387#0" expanded="true" />
+            <element signature="e#1431#1432#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/by/epam/voucher/parser/TravelVoucherDOMBuilderTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="43" lean-forward="true" selection-start-line="19" selection-start-column="43" selection-end-line="19" selection-end-column="43" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#653#654#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/by/epam/voucher/parser/TravelVoucherSAXBuilderTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#690#691#0" expanded="true" />
+            <element signature="e#758#759#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/by/epam/voucher/handler/TravelVoucherHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1105">
+          <caret line="70" column="9" lean-forward="false" selection-start-line="70" selection-start-column="9" selection-end-line="70" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>

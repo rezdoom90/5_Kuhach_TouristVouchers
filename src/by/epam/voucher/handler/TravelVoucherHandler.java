@@ -33,15 +33,35 @@ public class TravelVoucherHandler extends DefaultHandler {
         switch (localName) {
             case "roadTravelVoucher":
                 current = new RoadTravelVoucher();
+                current.setHotelType(attrs.getValue(HOTELTYPE_ATTR).intern());
+
+                if (attrs.getLength() == 2) {
+                    current.setType(TravelVoucher.Type.valueOf(attrs.getValue(TYPE_ATTR).toUpperCase()));
+                }
                 break;
             case "waterTravelVoucher":
                 current = new WaterTravelVoucher();
+                current.setHotelType(attrs.getValue(HOTELTYPE_ATTR).intern());
+
+                if (attrs.getLength() == 2) {
+                    current.setType(TravelVoucher.Type.valueOf(attrs.getValue(TYPE_ATTR).toUpperCase()));
+                }
                 break;
             case "airTravelVoucher":
                 current = new AirTravelVoucher();
+                current.setHotelType(attrs.getValue(HOTELTYPE_ATTR).intern());
+
+                if (attrs.getLength() == 2) {
+                    current.setType(TravelVoucher.Type.valueOf(attrs.getValue(TYPE_ATTR).toUpperCase()));
+                }
                 break;
             case "railTravelVoucher":
                 current = new RailTravelVoucher();
+                current.setHotelType(attrs.getValue(HOTELTYPE_ATTR).intern());
+
+                if (attrs.getLength() == 2) {
+                    current.setType(TravelVoucher.Type.valueOf(attrs.getValue(TYPE_ATTR).toUpperCase()));
+                }
                 break;
             default:
                 TravelVoucherSpecEnum temp = TravelVoucherSpecEnum.valueOf(localName.toUpperCase());
@@ -49,11 +69,6 @@ public class TravelVoucherHandler extends DefaultHandler {
                     currentEnum = temp;
                 }
         }
-            current.setHotelType(attrs.getValue(HOTELTYPE_ATTR).intern());
-
-            if (attrs.getLength() == 2) {
-                current.setType(TravelVoucher.Type.valueOf(attrs.getValue(TYPE_ATTR).toUpperCase()));
-            }
     }
 
     @Override
