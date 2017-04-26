@@ -7,7 +7,8 @@ import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
 
-import by.epam.voucher.entity.TravelVoucher;
+import by.epam.voucher.entity.*;
+import by.epam.voucher.exception.IllegalVoucherException;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.w3c.dom.Document;
@@ -16,9 +17,12 @@ import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
 
+import static org.apache.logging.log4j.Level.DEBUG;
+import static org.apache.logging.log4j.Level.ERROR;
 
-    public class TravelVoucherDOMBuilder {
-        static final Logger logger = LogManager.getLogger(TravelVoucherDOMBuilder.class);
+
+public class TravelVoucherDOMBuilder {
+        private static final Logger logger = LogManager.getLogger(TravelVoucherDOMBuilder.class);
         private Set<TravelVoucher> travelVouchers;
         private DocumentBuilder docBuilder;
 
@@ -28,7 +32,7 @@ import org.xml.sax.SAXException;
             try {
                 docBuilder = factory.newDocumentBuilder();
             } catch (ParserConfigurationException e) {
-                logger.error("Parser configuration exception: " + e);
+                logger.log(ERROR, "Parser configuration exception: " + e);
             }
         }
 
@@ -36,62 +40,72 @@ import org.xml.sax.SAXException;
             return travelVouchers;
         }
 
-        public void buildSetPeriodicals(String fileName) {
+        public void buildSetPeriodicals(String fileName) throws IllegalVoucherException {
             try {
-                // parsing XML-document and creation of tree model
                 Document doc = docBuilder.parse(fileName);
                 Element root = doc.getDocumentElement();
-                buildSetByTagName("newspaper", root);
-                buildSetByTagName("magazine", root);
+                buildSetByTagName("roadTravelVoucher", root);
+                buildSetByTagName("waterTravelVoucher", root);
+                buildSetByTagName("airTravelVoucher", root);
+                buildSetByTagName("railTravelVoucher", root);
 
             } catch (IOException e) {
-                logger.error("File error or I/O error: " + e);
+                logger.log(ERROR, "File error or I/O error: " + e);
             } catch (SAXException e) {
-                logger.error("Parsing failure: " + e);
+                logger.log(ERROR, "Parsing failure: " + e);
             } catch (IllegalArgumentException e) {
-                logger.error("uri is null" + e);
+                logger.log(ERROR, "uri is null" + e);
             }
         }
 
-        protected TravelVoucher buildPeriodical(Element periodicalElement) {
-//                            throws PeriodicalElementNotPresentException {
-            TravelVoucher periodical = null;
-            switch (periodicalElement.getTagName()) {
-                case "newspaper":
-                    periodical = new Newspaper();
-                    ((Newspaper) periodical).setColored(Boolean.valueOf(
-                            getElementTextContent(periodicalElement, "colored")));
+        protected TravelVoucher buildTravelVoucher(Element travelVoucherElement) throws IllegalVoucherException {
+            TravelVoucher travelVoucher;
+            switch (travelVoucherElement.getTagName()) {
+                case "roadTravelVoucher":
+                    travelVoucher = new RoadTravelVoucher();
+                    ((RoadTravelVoucher) travelVoucher).setBus(Boolean.valueOf(
+                            getElementTextContent(travelVoucherElement, "bus")));
                     break;
-                case "magazine":
-                    periodical = new Magazine();
-                    ((Magazine) periodical).setGlossy(Boolean.valueOf(
-                            getElementTextContent(periodicalElement, "glossy")));
+                case "waterTravelVoucher":
+                    travelVoucher = new WaterTravelVoucher();
+                    ((WaterTravelVoucher) travelVoucher).setCruise(Boolean.valueOf(
+                            getElementTextContent(travelVoucherElement, "cruise")));
+                    break;
+                case "airTravelVoucher":
+                    travelVoucher = new AirTravelVoucher();
+                    ((AirTravelVoucher) travelVoucher).setCommonAirliner(Boolean.valueOf(
+                            getElementTextContent(travelVoucherElement, "commonAirliner")));
+                    break;
+                case "railTravelVoucher":
+                    travelVoucher = new RailTravelVoucher();
+                    ((RailTravelVoucher) travelVoucher).setBusinessClass(Boolean.valueOf(
+                            getElementTextContent(travelVoucherElement, "businessClass")));
                     break;
                 default:
-                    // gotta think about this, probably not good
-                    return TravelVoucher.getEmptyPeriodical();
-//                throw new PeriodicalElementNotPresentException();
+                    throw new IllegalVoucherException();
             }
 
-            periodical.setIssn(periodicalElement.getAttribute("issn")); // проверка на null
-            if (periodicalElement.hasAttribute("period")) {
-                periodical.setPeriod(Periodical.Period.valueOf(
-                        periodicalElement.getAttribute("period").toUpperCase()));
+            travelVoucher.setHotelType(travelVoucherElement.getAttribute("hotelType"));
+            if (travelVoucherElement.hasAttribute("type")) {
+                travelVoucher.setType(TravelVoucher.Type.valueOf(
+                        travelVoucherElement.getAttribute("type").toUpperCase()));
             }
-            periodical.setTitle(getElementTextContent(periodicalElement, "title"));
-            periodical.setVolume(Integer.parseInt(
-                    getElementTextContent(periodicalElement,"volume")));
+            travelVoucher.setCost(Double.parseDouble(
+                    getElementTextContent(travelVoucherElement, "cost")));
+            travelVoucher.setDuration(Integer.parseInt(
+                    getElementTextContent(travelVoucherElement,"duration")));
+            travelVoucher.setCountry(getElementTextContent(travelVoucherElement, "country"));
 
-            return periodical;
+            return travelVoucher;
         }
 
-        private void buildSetByTagName(String tagName, Element root) {
-            logger.debug((root.getElementsByTagName(tagName)).getLength());
-            NodeList periodicalsList = root.getElementsByTagName(tagName);
-            for (int i = 0; i < periodicalsList.getLength(); i++) {
-                Element periodicalElement = (Element) periodicalsList.item(i);
-                TravelVoucher periodical = buildPeriodical(periodicalElement);
-                travelVouchers.add(periodical);
+        private void buildSetByTagName(String tagName, Element root) throws IllegalVoucherException {
+            logger.log(DEBUG, (root.getElementsByTagName(tagName)).getLength());
+            NodeList travelVouchersList = root.getElementsByTagName(tagName);
+            for (int i = 0; i < travelVouchersList.getLength(); i++) {
+                Element travelVoucherElement = (Element) travelVouchersList.item(i);
+                TravelVoucher travelVoucher = buildTravelVoucher(travelVoucherElement);
+                travelVouchers.add(travelVoucher);
             }
         }
 
